@@ -69,6 +69,9 @@
 			<scope>provided</scope>
 		</dependency>
 		
+		<!-- dependencias para autenticaçao com jwt -->
+		
+		
 	</dependencies>
 	<build>
 		<plugins>

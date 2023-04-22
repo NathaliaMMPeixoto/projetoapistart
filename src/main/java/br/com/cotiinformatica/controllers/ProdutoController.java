@@ -29,6 +29,7 @@ public class ProdutoController {
 
 	// metodo para realizar o servico de cadastro de produto
 	@PostMapping(ENDPOINT)
+	@CrossOrigin
 	public ResponseEntity<String> post(@RequestBody ProdutoPostRequest request) {
 
 		try {
@@ -50,6 +51,7 @@ public class ProdutoController {
 
 	// metodo para realizar o servico de edicao do produto
 	@PutMapping(ENDPOINT)
+	@CrossOrigin
 	public ResponseEntity<String> put(@RequestBody ProdutoPutRequest request) {
 
 		try {
@@ -82,6 +84,7 @@ public class ProdutoController {
 
 	// metodo para realizar o servico de exclusao do produto
 	@DeleteMapping(ENDPOINT + "/{idProduto}")
+	@CrossOrigin
 	public ResponseEntity<String> delete(@PathVariable("idProduto") Integer idProduto) {
 
 		try {
@@ -106,7 +109,7 @@ public class ProdutoController {
 
 	// metodo para realizar o servico de consulta do produto
 	@GetMapping(ENDPOINT)
-
+    @CrossOrigin
 	public ResponseEntity<List<ProdutoGetResponse>> get() {
 		
 		List<ProdutoGetResponse> response = new ArrayList<ProdutoGetResponse>();
@@ -130,6 +133,7 @@ public class ProdutoController {
 	
 	//Metodo para consultar 1 produto baseado no ID
 	@GetMapping(ENDPOINT + "/{idProduto}")
+	@CrossOrigin
 	public ResponseEntity<ProdutoGetResponse>getById(@PathVariable("idProduto")Integer idProduto){
 		
 		//consultar o produto no banco de dados atraves do ID
